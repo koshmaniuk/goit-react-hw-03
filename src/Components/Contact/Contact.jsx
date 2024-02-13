@@ -4,7 +4,7 @@ import { FaUser } from 'react-icons/fa';
 
 const Contact = ({ name, phoneNumber, contactId, deleteUser }) => {
   return (
-    <li className={css.item} key={contactId}>
+    <li className={css.item}>
       <div className={css.info}>
         <p className={css.text}>
           <FaUser size="13px" /> {name}
