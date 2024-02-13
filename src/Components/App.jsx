@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-
-import { ContactList } from './ContactList/ContactList';
-import { SearchBox } from './SearchBox/SearchBox';
-import { ContactForm } from './ContactForm/ContactForm';
+import ContactList from './ContactList/ContactList.jsx';
+import SearchBox from './SearchBox/SearchBox.jsx';
+import ContactForm from './ContactForm/ContactForm.jsx';
 
 const App = () => {
   const [filter, setFilter] = useState('');
@@ -14,14 +13,6 @@ const App = () => {
     }
     return [];
   });
-
-  // const [reviews, setReviews] = useState(() => {
-  //   const reviewsFromLs = window.localStorage.getItem('saved-reviews');
-  //   if (reviewsFromLs !== null) {
-  //     return JSON.parse(reviewsFromLs);
-  //   }
-  //   return { good: 0, neutral: 0, bad: 0 };
-  // });
 
   const filteredContacts = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filter.toLowerCase())

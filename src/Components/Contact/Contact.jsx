@@ -2,7 +2,7 @@ import css from './Contact.module.css';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 
-export const Contact = ({ name, phoneNumber, contactId, deleteUser }) => {
+const Contact = ({ name, phoneNumber, contactId, deleteUser }) => {
   return (
     <li className={css.item} key={contactId}>
       <div className={css.info}>
@@ -19,3 +19,5 @@ export const Contact = ({ name, phoneNumber, contactId, deleteUser }) => {
     </li>
   );
 };
+
+export default Contact;

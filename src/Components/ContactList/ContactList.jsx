@@ -1,7 +1,7 @@
-import { Contact } from '../Contact/Contact';
+import Contact from '../Contact/Contact';
 import css from './ContactList.module.css';
 
-export const ContactList = ({ items, onDelete }) => {
+const ContactList = ({ items, onDelete }) => {
   return (
     <ul className={css.container}>
       {items.map(item => (
@@ -16,3 +16,5 @@ export const ContactList = ({ items, onDelete }) => {
     </ul>
   );
 };
+
+export default ContactList;
