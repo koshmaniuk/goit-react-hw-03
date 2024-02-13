@@ -1,13 +1,13 @@
-.input {
+.searchBoxInput {
   width: 302px;
   height: 22px;
 }
 
-.text {
+.searchBoxTitle {
   margin: 0;
   font-weight: bold;
 }
 
-.container {
+.searchBoxContainer {
   margin-top: 26px;
 }

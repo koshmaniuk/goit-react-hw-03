@@ -1,4 +1,4 @@
-.item {
+.contact {
   border: 1px solid gray;
   border-radius: 4px;
   display: flex;
@@ -8,15 +8,15 @@
   justify-content: space-between;
 }
 
-.btn {
+.contactDeleteBtn {
   padding: 10px;
 }
 
-.text {
+.contactInfotext {
   margin: 0;
 }
 
-.info {
+.contactInfo {
   display: flex;
   flex-direction: column;
   gap: 8px;

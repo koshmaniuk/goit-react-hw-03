@@ -5,7 +5,7 @@ import SearchBox from './SearchBox/SearchBox.jsx';
 import ContactForm from './ContactForm/ContactForm.jsx';
 
 const App = () => {
-  const [filter, setFilter] = useState('');
+  const [filterInput, setFilterInput] = useState('');
   const [contacts, setContacts] = useState(() => {
     const contactsFromLs = window.localStorage.getItem('saved-contacts');
     if (contactsFromLs !== null) {
@@ -15,8 +15,12 @@ const App = () => {
   });
 
   const filteredContacts = contacts.filter(contact =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
+    contact.name.toLowerCase().includes(filterInput.toLowerCase())
   );
+
+  const onChangeFilterInput = text => {
+    setFilterInput(text);
+  };
 
   const addContact = newContact => {
     console.log(newContact);
@@ -35,10 +39,10 @@ const App = () => {
   }, [contacts]);
 
   return (
-    <div className="container">
-      <h1 className="text">Phonebook</h1>
+    <div className="app-container">
+      <h1 className="title">Phonebook</h1>
       <ContactForm onAdd={addContact} />
-      <SearchBox value={filter} onChange={setFilter} />
+      <SearchBox value={filterInput} onChange={onChangeFilterInput} />
       <ContactList items={filteredContacts} onDelete={deleteContact} />
     </div>
   );

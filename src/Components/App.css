@@ -2,10 +2,10 @@
   max-width: 1280px;
 }
 
-.container {
+.app-container {
   padding: 20px;
 }
 
-.text {
+.title {
   margin: 0;
 }
