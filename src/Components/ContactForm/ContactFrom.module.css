@@ -1,0 +1,38 @@
+.container {
+  border: 1px solid gray;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 22px;
+  width: 276px;
+  margin-top: 26px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  left: 0;
+  top: 46px;
+  color: orangered;
+  font-size: 14px;
+}
+
+.btn {
+  width: 140px;
+  align-self: center;
+  margin-top: 6px;
+  padding: 10px;
+}
+
+.btn:hover {
+  background-color: #3c6ecc;
+}
+
+.field {
+}
